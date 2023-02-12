@@ -4,5 +4,7 @@ class ChatModel {
   bool ?isgroup;
   String ?time;
   String ?currentMessage;
-  ChatModel({this.name, this.icon, this.isgroup, this.time, this.currentMessage});
+  String ?status;
+  bool select=false;
+  ChatModel({this.name, this.icon, this.isgroup, this.time, this.currentMessage,this.status, this.select=false});
 }

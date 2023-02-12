@@ -1,5 +1,6 @@
 import 'package:chat_app/CustomUI/customCard.dart';
 import 'package:chat_app/Model/ChatModel.dart';
+import 'package:chat_app/Screens/selectContact.dart';
 import 'package:flutter/material.dart';
 
 class chatApp extends StatefulWidget {
@@ -31,7 +32,7 @@ class _chatAppState extends State<chatApp> {
     ChatModel(
         name: "Dev Server Chat",
         isgroup: true,
-        currentMessage: "Hey everone on this group!",
+        currentMessage: "Hey everyone on this group!",
         time: "10:00",
         icon: "group.svg"
     ),
@@ -39,7 +40,7 @@ class _chatAppState extends State<chatApp> {
     ChatModel(
         name: "Balram Friends",
         isgroup: true,
-        currentMessage: "Hey everone on this group!",
+        currentMessage: "Hey everyone on this group!",
         time: "10:00",
         icon: "group.svg"
     ),
@@ -49,7 +50,9 @@ class _chatAppState extends State<chatApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context,MaterialPageRoute(builder: (builder)=>selectContact()));
+        },
         child: Icon(Icons.chat),
         backgroundColor: Colors.teal,
       ),
